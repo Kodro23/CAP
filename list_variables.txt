@@ -1,0 +1,1299 @@
+$IdPac
+[1] "Número de identificación del paciente"
+
+$Centro
+NULL
+
+$FechaIngr
+[1] "Fecha de ingreso del paciente"
+
+$Sexo
+[1] "Sexo"
+
+$Edad
+[1] "Edad (años)"
+
+$Sala
+[1] "Sala"
+
+$UCI_Interm
+[1] "UCI/Intermedios"
+
+$FechaIncl
+[1] "Fecha de inclusión del paciente en el estudio"
+
+$Coment
+NULL
+
+$Fumador
+[1] "Fumador"
+
+$NumPaq
+[1] "Número de paquetes al año"
+
+$Enolismo
+[1] "Enolismo"
+
+$Diabetes
+[1] "Antecedentes patológicos de diabetes"
+
+$EPOC
+[1] "Antecedentes patológicos de EPOC"
+
+$HTA
+[1] "Antecedentes patológicos de HTA"
+
+$Obesidad
+[1] "Antecedentes patológicos de obesidad"
+
+$CardIsq
+[1] "Antecedentes patológicos de cardiopatía isquémica"
+
+$Cancer
+[1] "Antecedentes patológicos de cáncer"
+
+$Otros
+[1] "Otros antecedentes patológicos"
+
+$OtrosEsp1
+[1] "Especificar otro antecedente patológico"
+
+$OtrosEsp2
+[1] "Especificar otro antecedente patológico"
+
+$OtrosEsp3
+[1] "Especificar otro antecedente patológico"
+
+$OtrosEsp4
+[1] "Especificar otro antecedente patológico"
+
+$CdxVM
+[1] "Criterios dx. Mayores: VM"
+
+$CdxVMtipo
+[1] "Criterios dx. Mayores: VM"
+
+$CdxShockSept
+[1] "Criterios dx. Mayores: Shock séptico"
+
+$CdxPAP90
+[1] "Criterios dx. Menores: PAPs<90"
+
+$CdxMultilobar
+[1] "Criterios dx. Menores: Multilobar"
+
+$CdxPaFi250
+[1] "Criterios dx. Menores: PaO2/FiO2<250"
+
+$FINE
+[1] "FINE"
+
+$Puntos
+[1] "Puntos"
+
+$APACHEII
+[1] "APACHE II"
+
+$SOFA
+[1] "SOFA"
+
+$CURB
+[1] "CURB"
+
+$Temperatura
+NULL
+
+$FR
+[1] "Frecuencia respiratoria (resp.por min.)"
+
+$FC
+[1] "Frecuencia cardiaca (latidos por min.)"
+
+$CFechaCom
+[1] "Fecha de comienzo"
+
+$CTos
+[1] "Tos"
+
+$CDolorPleur
+[1] "Dolor pleurítico"
+
+$CExpector
+[1] "Expectoración (coloración)"
+
+$CFiebre
+[1] "Fiebre (Tª)"
+
+$CEscalofrios
+[1] "Escalofríos"
+
+$CDisnea
+[1] "Disnea (CF)"
+
+$CAlterNivelConc
+[1] "Alteración nivel de conciencia"
+
+$COtros
+[1] "Otros"
+
+$COtrosEsp1
+[1] "Especificar otros"
+
+$COtrosEsp2
+[1] "Especificar otros"
+
+$RFechaDebInf
+[1] "Fecha de debut de los infiltrados"
+
+$RPatRad1
+[1] "Patrón radiológico"
+
+$RPatRad2
+[1] "Patrón radiológico"
+
+$RPatRadOtrosEsp
+[1] "Especificar otro patrón radiológico"
+
+$RAfect
+[1] "Afectación"
+
+$RNumLob
+[1] "Afectación: Número lóbulos"
+
+$FechaAnal
+[1] "Fecha de la analítica"
+
+$HLeucocitos
+[1] "Hemograma: Leucocitos (x10^9/L)"
+
+$HNS
+[1] "Hemograma: NS"
+
+$HNNS
+[1] "Hemograma: NNS"
+
+$HEOS
+[1] "Hemograma: EOS"
+
+$HBAS
+[1] "Hemograma: BAS"
+
+$HMON
+[1] "Hemograma: MON"
+
+$HLINF
+[1] "Hemograma: LINF"
+
+$HHematocrito
+[1] "Hemograma: Hematocrito (%)"
+
+$HHemoglobina
+[1] "Hemograma: Hemoglobina (g/L)"
+
+$HPlaquetas
+[1] "Hemograma: Plaquetas (x10^9/L)"
+
+$HVSG
+[1] "Hemograma: VSG (mm/h)"
+
+$BGlucosa
+[1] "Bioquímica: Glucosa (mg/dl)"
+
+$BSodio
+[1] "Bioquímica: Sodio (mg/dl)"
+
+$BGGT
+[1] "Bioquímica: GGT (mg/dl)"
+
+$BProteinasTot
+[1] "Bioquímica: Proteínas totales (mg/dl)"
+
+$BCK
+[1] "Bioquímica: CK (mg/dl)"
+
+$BCortisolBasal
+[1] "Bioquímica: Cortisol basal (mg/dl)"
+
+$BCreatinina
+[1] "Bioquímica: Creatinina (mg/dl)"
+
+$BPotasio
+[1] "Bioquímica: Potasio (mg/dl)"
+
+$BBilirrubina
+[1] "Bioquímica: Bilirrubina (mg/dl)"
+
+$BAlbumina
+[1] "Bioquímica: Albúmina (mg/dl)"
+
+$BLDH
+[1] "Bioquímica: LDH (mg/dl)"
+
+$BBUN
+[1] "Bioquímica: BUN (mg/dl)"
+
+$BGOTGPT
+[1] "Bioquímica: GOT/GPT (mg/dl)"
+
+$BFAlcalina
+[1] "Bioquímica: FAlcalina (mg/dl)"
+
+$BPCR
+[1] "Bioquímica: PCR (mg/dl)"
+
+$BTQuick
+[1] "Bioquímica: TQuick (mg/dl)"
+
+$GFiO201
+[1] "Gasometría FiO2. Ingreso (1)"
+
+$GpH01
+[1] "Gasometría pH. Ingreso (1)"
+
+$GpO201
+[1] "Gasometría pO2. Ingreso (1)"
+
+$GpCO201
+[1] "Gasometría pCO2. Ingreso (1)"
+
+$GEB01
+[1] "Gasometría EB. Ingreso (1)"
+
+$GFiO202
+[1] "Gasometría FiO2. Ingreso (2)"
+
+$GpH02
+[1] "Gasometría pH. Ingreso (2)"
+
+$GpO202
+[1] "Gasometría pO2. Ingreso (2)"
+
+$GpCO202
+[1] "Gasometría pCO2. Ingreso (2)"
+
+$GEB02
+[1] "Gasometría EB. Ingreso (2)"
+
+$GFiO22
+[1] "Gasometría FiO2. Día 2"
+
+$GpH2
+[1] "Gasometría pH. Día 2"
+
+$GpO22
+[1] "Gasometría pO2. Día 2"
+
+$GpCO22
+[1] "Gasometría pCO2. Día 2"
+
+$GEB2
+[1] "Gasometría EB. Día 2"
+
+$GFiO24
+[1] "Gasometría FiO2. Día 4"
+
+$GpH4
+[1] "Gasometría pH. Día 4"
+
+$GpO24
+[1] "Gasometría pO2. Día 4"
+
+
+$GpH6
+[1] "Gasometría pH. Día 6"
+
+$GpO26
+[1] "Gasometría pO2. Día 6"
+
+$GpCO26
+[1] "Gasometría pCO2. Día 6"
+
+$GEB6
+[1] "Gasometría EB. Día 6"
+
+$GFiO28
+[1] "Gasometría FiO2. Día 8"
+
+$GpH8
+[1] "Gasometría pH. Día 8"
+
+$GpO28
+[1] "Gasometría pO2. Día 8"
+
+$GpCO28
+[1] "Gasometría pCO2. Día 8"
+
+$GEB8
+[1] "Gasometría EB. Día 8"
+
+$LPGlu
+[1] "Líquido pleural: Glu"
+
+$LPProt
+[1] "Líquido pleural: Prot"
+
+$LPLDH
+[1] "Líquido pleural: LDH"
+
+$LPCelulas
+[1] "Líquido pleural: Células"
+
+$LPPM
+[1] "Líquido pleural: PM"
+
+$MEsputoFecha1
+[1] "Esputo: Fecha"
+
+$MEsputoCultivo1
+[1] "Esputo: Cultivo"
+
+$MEsputoCultivoResult1
+[1] "Esputo: Resultado del Cultivo"
+
+$MEsputoGram1
+[1] "Esputo: Gram"
+
+$MEsputoZiehl1
+[1] "Esputo: Ziehl"
+
+$MEsputoCalidad1
+[1] "Esputo: Calidad de la muestra"
+
+$MEsputoFecha2
+[1] "Esputo: Fecha"
+
+$MEsputoCultivo2
+[1] "Esputo: Cultivo"
+
+$MEsputoCultivoResult2
+[1] "Esputo: Resultado del Cultivo"
+
+$MEsputoGram2
+[1] "Esputo: Gram"
+
+$MEsputoZiehl2
+[1] "Esputo: Ziehl"
+
+$MEsputoCalidad2
+[1] "Esputo: Calidad de la muestra"
+
+$MBASFecha1
+[1] "BAS: Fecha"
+
+$MBASResult1
+[1] "BAS: Resultado"
+
+$MBASFecha2
+[1] "BAS: Fecha"
+
+$MBASResult2
+[1] "BAS: Resultado"
+
+$MHemocFecha1
+[1] "Hemocultivos: Fecha"
+
+$MHemocCultivo1
+[1] "Hemocultivos: Cultivo"
+
+$MHemocCultivoResult1
+[1] "Hemocultivos: Resultado del Cultivo"
+
+$MHemocFecha2
+[1] "Hemocultivos: Fecha"
+
+$MHemocCultivo2
+[1] "Hemocultivos: Cultivo"
+
+$MHemocCultivoResult2
+[1] "Hemocultivos: Resultado del Cultivo"
+
+$MHemocFecha3
+[1] "Hemocultivos: Fecha"
+
+$MHemocCultivo3
+[1] "Hemocultivos: Cultivo"
+
+$MHemocCultivoResult3
+[1] "Hemocultivos: Resultado del Cultivo"
+
+$MLiqPleuFecha
+[1] "Líquido pleural: Fecha"
+
+$MLiqPleuResult
+[1] "Líquido pleural: Resultado"
+
+$MAgLegFecha
+[1] "Ag Legionella (orina): Fecha"
+
+$MAgLegResult
+[1] "Ag Legionella (orina): Resultado"
+
+$MAgNeuFecha
+[1] "Ag Neumococo (orina): Fecha"
+
+$MAgNeuResult
+[1] "Ag Neumococo (orina): Resultado"
+
+$MAgAspFecha
+[1] "Ag Aspergillar: Fecha"
+
+$MAgAspResult
+[1] "Ag Aspergillar: Resultado"
+
+$MUrocultivoFecha
+[1] "Urocultivo: Fecha"
+
+$MUrocultivoResult
+[1] "Urocultivo: Resultado"
+
+$FFecha
+[1] "Fecha de realización"
+
+$FCatTelFBSNum
+[1] "Catéter telescopado: FBS nº"
+
+$FCatTel
+[1] "Catéter telescopado"
+
+$FCatTelCalidad
+[1] "Catéter telescopado: Calidad de la muestra"
+
+$FCatTelGram
+[1] "Catéter telescopado: Gram"
+
+$FCatTelLegionella
+[1] "Catéter telescopado: Legionella"
+
+$FCatTelCultivoHabitual
+[1] "Catéter telescopado: Cultivo habitual"
+
+$FCatTelCultivoHongos
+[1] "Catéter telescopado: Cultivo hongos"
+
+$FCatTelCitologia
+[1] "Catéter telescopado: Citología y recuento celular"
+
+$FLavBroncFBSNum
+[1] "Lavado broncoalveolar: FBS nº"
+
+$FLavBronc
+[1] "Lavado broncoalveolar"
+
+$FLavBroncLobulo
+[1] "Lavado broncoalveolar: Lóbulo"
+
+$FLavBroncNumLBA
+[1] "Lavado broncoalveolar: Nº LBA"
+
+$FLavBroncCalidad
+[1] "Lavado broncoalveolar: Calidad de la muestra"
+
+$FLavBroncGramICO
+[1] "Lavado broncoalveolar: Gram/ICO"
+
+$FLavBroncCultivoHabitual
+[1] "Lavado broncoalveolar: Cultivo habitual"
+
+$FLavBroncZiehl
+[1] "Lavado broncoalveolar: Ziehl/PCR C Lowenstein"
+
+$FLavBroncCultivoHongos
+[1] "Lavado broncoalveolar: Cultivo hongos"
+
+$FLavBroncLegionella
+[1] "Lavado broncoalveolar: Legionella"
+
+$FLabBroncCultivoCelular
+[1] "Lavado broncoalveolar: Cultivo celular (virus)"
+
+$FLavBroncCitologia
+[1] "Lavado broncoalveolar: Citología"
+
+$FLavBroncRecCeluA
+[1] "Lavado broncoalveolar: Recuento celular (automático)"
+
+$FLavBroncRecCeluM
+[1] "Lavado broncoalveolar: Recuento celular (manual)"
+
+$SCPneumoniae1
+[1] "C.pneumoniae 1ª muestra"
+
+$SCBurnetti1
+[1] "C.burnetti 1ª muestra"
+
+$SLPneumop1
+[1] "L.pneumophila 1ª muestra"
+
+$SMycoplasma1
+[1] "Mycoplasma pneumoniae 1ª muestra"
+
+$SVirusResp1
+[1] "Virus respiratorios 1ª muestra"
+
+$SCPneumoniae2
+[1] "C.pneumoniae 2ª muestra"
+
+$SCBurnetti2
+[1] "C.burnetti 2ª muestra"
+
+$SLPneumop2
+[1] "L.pneumophila 2ª muestra"
+
+$SMycoplasma2
+[1] "Mycoplasma pneumoniae 2ª muestra"
+
+$SVirusResp2
+[1] "Virus respiratorios 2ª muestra"
+
+$SENMuestraResp
+[1] "Muestra respiratoria"
+
+$SENHemocultivos
+[1] "Hemocultivos"
+
+$SENGermenIdent
+[1] "Germen identificado"
+
+$SENAntibiograma
+[1] "Antibiograma"
+
+$IL61
+[1] "IL-6. Día 1"
+
+$IL62
+[1] "IL-6. Día 2"
+
+$IL63
+[1] "IL-6. Día 3"
+
+$IL64
+[1] "IL-6. Día 4"
+
+$IL65
+[1] "IL-6. Día 5"
+
+$IL66
+[1] "IL-6. Día 6"
+
+$IL67
+[1] "IL-6. Día 7"
+
+$IL81
+[1] "IL-8. Día 1"
+
+$IL82
+[1] "IL-8. Día 2"
+
+$IL83
+[1] "IL-8. Día 3"
+
+$IL84
+[1] "IL-8. Día 4"
+
+$IL85
+[1] "IL-8. Día 5"
+
+$IL86
+[1] "IL-8. Día 6"
+
+$IL87
+[1] "IL-8. Día 7"
+
+$IL101
+[1] "IL-10. Día 1"
+
+$IL102
+[1] "IL-10. Día 2"
+
+$IL103
+[1] "IL-10. Día 3"
+
+$IL104
+[1] "IL-10. Día 4"
+
+$IL105
+[1] "IL-10. Día 5"
+
+$IL106
+[1] "IL-10. Día 6"
+
+$IL107
+[1] "IL-10. Día 7"
+
+$PCR1
+[1] "PCR. Día 1"
+
+$PCR2
+[1] "PCR. Día 2"
+
+$PCR3
+[1] "PCR. Día 3"
+
+$PCR4
+[1] "PCR. Día 4"
+
+$PCR5
+[1] "PCR. Día 5"
+
+$PCR6
+[1] "PCR. Día 6"
+
+$PCR7
+[1] "PCR. Día 7"
+
+$PCT1
+[1] "PCT. Día 1"
+
+$PCT2
+[1] "PCT. Día 2"
+
+$PCT3
+[1] "PCT. Día 3"
+
+$PCT4
+[1] "PCT. Día 4"
+
+$PCT5
+[1] "PCT. Día 5"
+
+$PCT6
+[1] "PCT. Día 6"
+
+$PCT7
+[1] "PCT. Día 7"
+
+$TNFalfa1
+[1] "TNF alfa. Día 1"
+
+$TNFalfa2
+[1] "TNF alfa. Día 2"
+
+$TNFalfa3
+[1] "TNF alfa. Día 3"
+
+$TNFalfa4
+[1] "TNF alfa. Día 4"
+
+$TNFalfa5
+[1] "TNF alfa. Día 5"
+
+$TNFalfa6
+[1] "TNF alfa. Día 6"
+
+$TNFalfa7
+[1] "TNF alfa. Día 7"
+
+$Cortisol1
+[1] "Cortisol. Día 1"
+
+$Cortisol2
+[1] "Cortisol. Día 2"
+
+$Cortisol3
+[1] "Cortisol. Día 3"
+
+$Cortisol4
+[1] "Cortisol. Día 4"
+
+$Cortisol5
+[1] "Cortisol. Día 5"
+
+$Cortisol6
+[1] "Cortisol. Día 6"
+
+$Cortisol7
+[1] "Cortisol. Día 7"
+
+$Temp1
+[1] "Tª (<37.2) Día 1"
+
+$Temp2
+[1] "Tª (<37.2) Día 2"
+
+$Temp3
+[1] "Tª (<37.2) Día 3"
+
+$Temp4
+[1] "Tª (<37.2) Día 4"
+
+$Temp5
+[1] "Tª (<37.2) Día 5"
+
+$Temp6
+[1] "Tª (<37.2) Día 6"
+
+$Temp7
+[1] "Tª (<37.2) Día 7"
+
+$FC1
+[1] "FC (<100x) Día 1"
+
+$FC2
+[1] "FC (<100x) Día 2"
+
+$FC3
+[1] "FC (<100x) Día 3"
+
+$FC4
+[1] "FC (<100x) Día 4"
+
+$FC5
+[1] "FC (<100x) Día 5"
+
+$FC6
+[1] "FC (<100x) Día 6"
+
+$FC7
+[1] "FC (<100x) Día 7"
+
+$FR1
+[1] "FR (<24x) Día 1"
+
+$FR2
+[1] "FR (<24x) Día 2"
+
+$FR3
+[1] "FR (<24x) Día 3"
+
+$FR4
+[1] "FR (<24x) Día 4"
+
+$FR5
+[1] "FR (<24x) Día 5"
+
+$FR6
+[1] "FR (<24x) Día 6"
+
+$FR7
+[1] "FR (<24x) Día 7"
+
+$TASist1
+[1] "TA sist (>90) Día 1"
+
+$TASist2
+[1] "TA sist (>90) Día 2"
+
+$TASist3
+[1] "TA sist (>90) Día 3"
+
+$TASist4
+[1] "TA sist (>90) Día 4"
+
+$TASist5
+[1] "TA sist (>90) Día 5"
+
+$TASist6
+[1] "TA sist (>90) Día 6"
+
+$TASist7
+[1] "TA sist (>90) Día 7"
+
+$SO21
+[1] "SO2 (>90%) Día 1"
+
+$SO22
+[1] "SO2 (>90%) Día 2"
+
+$SO23
+[1] "SO2 (>90%) Día 3"
+
+$SO24
+[1] "SO2 (>90%) Día 4"
+
+$SO25
+[1] "SO2 (>90%) Día 5"
+
+$SO26
+[1] "SO2 (>90%) Día 6"
+
+$SO27
+[1] "SO2 (>90%) Día 7"
+
+$EstabClin
+[1] "Estabilidad clínica en el día"
+
+$Fiebre38C24h
+[1] "Fiebre > 38ºC. 24h post tto"
+
+$Fiebre38C48h
+[1] "Fiebre > 38ºC. 48h post tto"
+
+$Fiebre38C72h
+[1] "Fiebre > 38ºC. 72h post tto"
+
+$Clinica24h
+[1] "Clínica (persistencia disnea, tos, expect.). 24h post tto"
+
+$Clinica48h
+[1] "Clínica (persistencia disnea, tos, expect.). 48h post tto"
+
+$Clinica72h
+[1] "Clínica (persistencia disnea, tos, expect.). 72h post tto"
+
+$ShockSeptico
+[1] "Shock séptico"
+
+$ShockSepticoFecha
+[1] "Fecha shock séptico"
+
+$NecVM
+[1] "Necesidad de VM"
+
+$NecVMFecha
+[1] "Fecha necesidad de VM"
+
+$ProgresInf
+[1] "Progresión infiltrados"
+
+$ProgresInfFecha
+[1] "Fecha progresión infiltrados"
+
+$NeumNoRespond
+[1] "Neumonía no respondedora"
+
+$NeumProgres
+[1] "Neumonía progresiva"
+
+$NeumProgresAranc
+[1] "Neumonía progresiva"
+
+$EarlyFailure
+[1] "Early failure"
+
+$LateFailure
+[1] "Late failure"
+
+$LateFailure2
+[1] "Late failure"
+
+$LateFailure3
+[1] "Late failure"
+
+$EMV
+[1] "Early mechanical ventilation"
+
+$ESS
+[1] "Early shock septic"
+
+$ED
+[1] "Early death"
+
+$PF
+[1] "Persistence fever"
+
+$RP
+[1] "Radiograpic progression"
+
+$NI
+[1] "Nosocomial infection"
+
+$RF
+[1] "Respiratory failure"
+
+$LMV
+[1] "Late mechanical ventilation"
+
+$LSS
+[1] "Late shock septic"
+
+$Dia_TF
+[1] "Day faliure"
+
+$TAntibioticoInicial
+[1] "Antibiótico"
+
+$num_Antibiotico_fallo
+[1] "Tratamiento antibiótico en los cinco primeros días"
+
+$dur_Antibiotico_fallo
+[1] "Duración tratamiento antibiótico en los cinco primeros días (días)"
+
+$TAntibiotico1
+[1] "Antibiótico"
+
+$TDosis1
+[1] "Dosis (gr)"
+
+$TIntervalo1
+[1] "Intervalo (h)"
+
+$TFechaInicio1
+[1] "Fecha inicio"
+
+$TFechaSupresion1
+[1] "Fecha supresión"
+
+$TMotivoCambio1
+[1] "Motivo cambio"
+
+$TAntibiotico2
+[1] "Antibiótico"
+
+$TDosis2
+[1] "Dosis (gr)"
+
+$TIntervalo2
+[1] "Intervalo (h)"
+
+$TFechaInicio2
+[1] "Fecha inicio"
+
+$TFechaSupresion2
+[1] "Fecha supresión"
+
+$TMotivoCambio2
+[1] "Motivo cambio"
+
+$TAntibiotico3
+[1] "Antibiótico"
+
+$TDosis3
+[1] "Dosis (gr)"
+
+$TIntervalo3
+[1] "Intervalo (h)"
+
+$TFechaInicio3
+[1] "Fecha inicio"
+
+$TFechaSupresion3
+[1] "Fecha supresión"
+
+$TMotivoCambio3
+[1] "Motivo cambio"
+
+$TAntibiotico4
+[1] "Antibiótico"
+
+$TDosis4
+[1] "Dosis (gr)"
+
+$TIntervalo4
+[1] "Intervalo (h)"
+
+$TFechaInicio4
+[1] "Fecha inicio"
+
+$TFechaSupresion4
+[1] "Fecha supresión"
+
+$TMotivoCambio4
+[1] "Motivo cambio"
+
+$TAntibiotico5
+[1] "Antibiótico"
+
+$TDosis5
+[1] "Dosis (gr)"
+
+$TIntervalo5
+[1] "Intervalo (h)"
+
+$TFechaInicio5
+[1] "Fecha inicio"
+
+$TFechaSupresion5
+[1] "Fecha supresión"
+
+$TMotivoCambio5
+[1] "Motivo cambio"
+
+$TAntibiotico6
+[1] "Antibiótico"
+
+$TDosis6
+[1] "Dosis (gr)"
+
+$TIntervalo6
+[1] "Intervalo (h)"
+
+$TFechaInicio6
+[1] "Fecha inicio"
+
+$TFechaSupresion6
+[1] "Fecha supresión"
+
+$TMotivoCambio6
+[1] "Motivo cambio"
+
+$TAntibiotico7
+[1] "Antibiótico"
+
+$TDosis7
+[1] "Dosis (gr)"
+
+$TIntervalo7
+[1] "Intervalo (h)"
+
+$TFechaInicio7
+[1] "Fecha inicio"
+
+$TFechaSupresion7
+[1] "Fecha supresión"
+
+$TMotivoCambio7
+[1] "Motivo cambio"
+
+$TAntibiotico8
+[1] "Antibiótico"
+
+$TDosis8
+[1] "Dosis (gr)"
+
+$TIntervalo8
+[1] "Intervalo (h)"
+
+$TFechaInicio8
+[1] "Fecha inicio"
+
+$TFechaSupresion8
+[1] "Fecha supresión"
+
+$TMotivoCambio8
+[1] "Motivo cambio"
+
+$TAntibiotico9
+[1] "Antibiótico"
+
+$TDosis9
+[1] "Dosis (gr)"
+
+$TIntervalo9
+[1] "Intervalo (h)"
+
+$TFechaInicio9
+[1] "Fecha inicio"
+
+$TFechaSupresion9
+[1] "Fecha supresión"
+
+$TMotivoCambio9
+[1] "Motivo cambio"
+
+$TAntibiotico10
+[1] "Antibiótico"
+
+$TDosis10
+[1] "Dosis (gr)"
+
+$TIntervalo10
+[1] "Intervalo (h)"
+
+$TFechaInicio10
+[1] "Fecha inicio"
+
+$TFechaSupresion10
+[1] "Fecha supresión"
+
+$TMotivoCambio10
+[1] "Motivo cambio"
+
+$TAntibiotico11
+[1] "Antibiótico"
+
+$TDosis11
+[1] "Dosis (gr)"
+
+$TIntervalo11
+[1] "Intervalo (h)"
+
+$TFechaInicio11
+[1] "Fecha inicio"
+
+$TFechaSupresion11
+[1] "Fecha supresión"
+
+$TMotivoCambio11
+[1] "Motivo cambio"
+
+$TAntibiotico12
+[1] "Antibiótico"
+
+$TDosis12
+[1] "Dosis (gr)"
+
+$TIntervalo12
+[1] "Intervalo (h)"
+
+$TFechaInicio12
+[1] "Fecha inicio"
+
+$TFechaSupresion12
+[1] "Fecha supresión"
+
+$TMotivoCambio12
+[1] "Motivo cambio"
+
+$TTiempoDesdeLlegUCIAS
+[1] "Tiempo inicio antibiótico desde llegada a UCIAS"
+
+$TTiempoHastaInicMPDNPlac
+[1] "Tiempo inicio antibiótico hasta inicio MPDN/placebo"
+
+$TDosisPDNLlegadaUCIAS
+[1] "Dosis de PDN llegada a UCIAS"
+
+$TDosisPDNLlegadaUCIASmg
+NULL
+
+$EvolHiperglicem
+[1] "Hiperglicemias"
+
+$EvolInfCandida
+[1] "Infección por candida"
+
+$EvolHemorragia
+[1] "Hemorragia"
+
+$EvolInfNosoc
+[1] "Infección nosocomial"
+
+$EvolInfNosocTipo
+[1] "Tipo de infección nosocomial"
+
+$EvolPolineuro
+[1] "Polineuropatía"
+
+$EvolInsufHepa
+[1] "Insuficiencia hepática"
+
+$EvolSDRA
+[1] "SDRA"
+
+$EvolSDRAFecha
+[1] "Fecha SDRA"
+
+$EvolShock
+[1] "Shock"
+
+$EvolShockFecha
+[1] "Fecha shock"
+
+$EvolShockTiempo
+[1] "Tiempo necesidad aminas"
+
+$EvolCID
+[1] "C.I.D."
+
+$EvolCIDFecha
+[1] "Fecha C.I.D."
+
+$EvolInsufRenal
+[1] "Insuficiencia renal"
+
+$EvolInsufRenalFecha
+[1] "Fecha insuficiencia renal"
+
+$EvolDialisis
+[1] "Diálisis"
+
+$EvolUCI
+[1] "U.C.I."
+
+$EvolUCIFechaIngr
+[1] "Fecha ingreso U.C.I."
+
+$EvolUCIFechaAlta
+[1] "Fecha alta U.C.I."
+
+$EvolInterm
+[1] "Intermedios"
+
+$EvolIntermFechaIngr
+[1] "Fecha ingreso intermedios"
+
+$EvolIntermFechaAlta
+[1] "Fecha alta intermedios"
+
+$EvolVentilMec
+[1] "Ventilación mecánica"
+
+$EvolVentilMecIntub
+[1] "Intubación"
+
+$EvolVentilMecExtub
+[1] "Extubación"
+
+$EvolVentilMecDosis
+[1] "Dosis MPDN/placebo previas intubación"
+
+$EvolVNI
+[1] "VNI"
+
+$EvolVNIFecha
+[1] "Fecha VNI"
+
+$EvolVNIDias
+[1] "Días VNI"
+
+$EvolExitus
+[1] "Exitus"
+
+$EvolExitusFecha
+[1] "Fecha exitus"
+
+$EvolExitusDosis
+[1] "Dosis MPDN/placebo administradas hasta exitus"
+
+$EvolExitusCausas
+[1] "Causas exitus"
+
+$EvolSuspProt
+[1] "Suspensión protocolo"
+
+$EvolSuspProtFecha
+[1] "Fecha suspensión protocolo"
+
+$EvolSuspProtNumDosis
+[1] "Número dosis administradas"
+
+$EvolSuspProtMotivo
+[1] "Motivo supensión protocolo"
+
+$EvolMortUCI
+[1] "Mortalidad UCI"
+
+$EvolMort28
+[1] "Mortalidad 28 días"
+
+$EvolMort90
+[1] "Mortalidad 90 días"
+
+$EvolDiasUCI
+[1] "Días estancia UCI"
+
+$EvolDiasInterm
+[1] "Días estancia intermedios"
+
+$EvolFechaAltaHosp
+[1] "Fecha alta hospitalaria"
+
+$EvolDiasEstanciaTotal
+[1] "Días estancia total"
+
+$EvolOtrasComplic
+[1] "Otras complicaciones"
+
+$EvolOtrasComplicEsp1
+[1] "Especificar otras complicaciones"
+
+$EvolOtrasComplicEsp2
+[1] "Especificar otras complicaciones"
+
+$V192
+NULL
+
+$Grupo
+[1] "Tratamiento"
+
+$ITT
+[1] "Población ITT"
+
+$tiempo_estancia
+[1] "Tiempo de estancia (días)"
+
+$PP
+[1] "Población PP"
+
+$interim
+[1] "Interim analysis"
