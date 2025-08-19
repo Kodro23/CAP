@@ -66,7 +66,7 @@ BayesianModel <- setRefClass(
       )
       return(samp)
     },
-    graphs = function(sample, likelihood = NULL, type_of_graph = "traceplot", apriori = NULL) {
+    graphs = function(sample, likelihood = NULL, type_of_graph = "traceplot", apriori = NULL, xlim=c(-3,3), ylim=c(-3,3)) {
       #' To display some graphs for model diagnostic
       #' @param type_of_graph character in the list ["traceplot", "autocorr", "density","comparison"]
       #' @param sample the MCMC sample
@@ -93,10 +93,12 @@ BayesianModel <- setRefClass(
           plot(dens, main = paste("Posterior vs Prior", 
               if (!is.null(likelihood)) "vs Likelihood", 
                               ":", param_name),
-              lwd = 2, col = "blue", xlab = param_name)
+              lwd = 2, col = "blue", xlab = param_name,
+              xlim=xlim, ylim=ylim)
       
           # Add prior
           curve(prior_func(x), add = TRUE, col = "red", lwd = 2, lty = 2)
+          
       
           # Add likelihood if provided
           if (!is.null(likelihood)) {
