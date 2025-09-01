@@ -7,7 +7,7 @@ install_packages<-function(path_to_requirement){
     }
     }
     invisible(lapply(packages, install_if_missing))
-    install.packages(c("recipes", "hardhat", "sparsevctrs","sjmisc","survminer","knitr","markdown",), type = "binary")
+    install.packages(c("recipes", "hardhat", "sparsevctrs","sjmisc","survminer","knitr","markdown","performance","glmmTMB"), type = "binary")
 }
 # Required packages
 library(ggplot2)
@@ -42,3 +42,5 @@ library(pracma)
 library(rjags)
 library(coda)
 library(lattice)
+library(performance)
+library(miceadds)

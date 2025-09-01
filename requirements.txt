@@ -34,3 +34,4 @@ pROC
 maxLik
 pracma
 rjags
+glmmTMB
