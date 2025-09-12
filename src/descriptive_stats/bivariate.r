@@ -130,7 +130,7 @@ compare_var_cat <- function(df, group_var_name) {
   for (var in cat_vars) {
     #For each categorical variable compute contigency table...
     contingency <- table(df[[var]], df[[group_var_name]])
-    expected <- chisq.test(contingency)$expected
+    expected <- chisq.test(contingency,correct = FALSE)$expected
     test_type <- ""
     pval <- NA
 
@@ -345,6 +345,7 @@ CorrelationsStudy <- setRefClass(
       for (i in seq_len(n_vars)) {
         for (j in seq(i + 1, n_vars)) {
           x <- dataset[[categorical_variables[i]]]
+          x<- x[!is.na]
           y <- dataset[[categorical_variables[j]]]
           assoc <- CramerV(table(x, y), bias.correct = TRUE)
           assoc_matrix[i, j] <- assoc
