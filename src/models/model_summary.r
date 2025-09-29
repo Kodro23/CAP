@@ -7,12 +7,12 @@ logit <- setRefClass(
     #' @params A dataframe and a list of binary variables to explain
   "logit",
   fields = list(
-    dataset = "mids",
+    imp = "mids",
     vars_to_explain = "character"
   ),
   methods = list(
-    initialize = function(dataset, vars_to_explain) {
-      imp <<- dataset
+    initialize = function(imp, vars_to_explain) {
+      imp <<- imp
       vars_to_explain <<- vars_to_explain
     },
 
@@ -44,12 +44,12 @@ logit <- setRefClass(
         results_list <- map(vars_to_explain, function(var) {
         # outcome ~ Grupo
             if (is.null(interraction_terms)){
-                fit1 <- with(imp, glm(as.formula(paste(var, "~", main_var)), family = binomial))
+                fit1 <- with(imp, suppressWarnings(glm(as.formula(paste(var, "~", main_var)), family = binomial)))
                 pool1 <- pool(fit1)
                 rows_to_extract <- 2:nlevels(factor(data_dint[[main_var]]))
                 stats1 <- map_dfr(rows_to_extract, ~extract_stats(pool1, .x))
                 if (!is.null(other_variables)){
-                    fit2 <- with(imp, glm(as.formula(paste(var, "~", paste(c(main_var, other_variables), collapse = " + "))), family = binomial))
+                    fit2 <- with(imp, suppressWarnings(glm(as.formula(paste(var, "~", paste(c(main_var, other_variables), collapse = " + "))), family = binomial)))
                     pool2 <- pool(fit2)
                     stats2 <- map_dfr(rows_to_extract, ~extract_stats(pool2, .x))
                     data.frame(
@@ -72,7 +72,7 @@ logit <- setRefClass(
                 for (inter in interraction_terms){
                     interraction[[length(interraction)+1]] <-paste(main_var,":", inter)
                 }
-                fit1 <- with(imp, glm(as.formula(paste(var, "~", paste(c(main_var, interraction_terms, interraction), collapse = " + "))), family = binomial))
+                fit1 <- with(imp, suppressWarnings(glm(as.formula(paste(var, "~", paste(c(main_var, interraction_terms, interraction), collapse = " + "))), family = binomial)))
                 pool1 <- pool(fit1)
 
                 #number of rows for main_var and interraction terms
@@ -91,7 +91,7 @@ logit <- setRefClass(
                     #total number of rows
                     nrows<-1+n_main+n_inter_terms+n_other
                     rows_to_extract<-c(2:n_main, n_inter:nrows)
-                    fit2 <- with(imp, glm(as.formula(paste(var, "~", paste(c(main_var,interraction_terms, interraction, other_variables), collapse = " + "))), family = binomial))
+                    fit2 <- with(imp, suppressWarnings(glm(as.formula(paste(var, "~", paste(c(main_var,interraction_terms, interraction, other_variables), collapse = " + "))), family = binomial)))
                     pool2 <- pool(fit2)
                     stats2 <- map_dfr(rows_to_extract, ~extract_stats(pool2, .x))
                     data.frame(
@@ -171,10 +171,10 @@ logit <- setRefClass(
         results_list <- map(vars_to_explain, function(var){
         # formula for first regression: outcome ~ Grupo
         if (is.null(interraction_terms)){
-            fit1 <- with(imp, glm(as.formula(paste(var, "~", main_var)), family = binomial))
+            fit1 <- with(imp, suppressWarnings(glm(as.formula(paste(var, "~", main_var)), family = binomial)))
             perf1 <- extract_performance(fit1,var)
             if (!is.null(other_variables)){
-                fit2 <- with(imp, glm(as.formula(paste(var, "~", paste(c(main_var, other_variables), collapse = " + "))), family = binomial))
+                fit2 <- with(imp, suppressWarnings(glm(as.formula(paste(var, "~", paste(c(main_var, other_variables), collapse = " + "))), family = binomial)))
                 perf2 <- extract_performance(fit2,var)
                 data.frame(
                     Variable_to_explain = var,
@@ -212,10 +212,10 @@ logit <- setRefClass(
             for (inter in interraction_terms){
                 interraction[[length(interraction)+1]] <-paste(main_var,":", inter)
             }
-            fit1 <- with(imp, glm(as.formula(paste(var, "~", paste(c(main_var,interraction,interraction_terms ), collapse = " + "))), family = binomial))
+            fit1 <- with(imp, suppressWarnings(glm(as.formula(paste(var, "~", paste(c(main_var,interraction,interraction_terms ), collapse = " + "))), family = binomial)))
             perf1 <- extract_performance(fit1,var)
             if (!is.null(other_variables)){
-                fit2 <- with(imp, glm(as.formula(paste(var, "~", paste(c(main_var,interraction, interraction_terms, other_variables), collapse = " + "))), family = binomial))
+                fit2 <- with(imp, suppressWarnings(glm(as.formula(paste(var, "~", paste(c(main_var,interraction, interraction_terms, other_variables), collapse = " + "))), family = binomial)))
                 perf2 <- extract_performance(fit2,var)
                 data.frame(
                     Variable_to_explain = var,
@@ -268,12 +268,12 @@ cox <- setRefClass(
     #' @params A dataframe and a list of binary variables to explain
   "cox",
   fields = list(
-    dataset = "mids",
+    imp_data = "mids",
     time_event_pairs = "list"
   ),
   methods = list(
-    initialize = function(dataset, time_event_pairs) {
-      imp_data <<- dataset
+    initialize = function(imp_data, time_event_pairs) {
+      imp_data <<- imp_data
       time_event_pairs <<- time_event_pairs
     },
 
@@ -309,19 +309,19 @@ cox <- setRefClass(
             events <- paste(event_var, "x", levels(as.factor(data_dint[[main_var]]))[-1])
             times  <- rep(time_var, length(events))
             # Fit Cox models
-            fit1 <- with(imp_data, coxph(as.formula(paste0("Surv(", time_var, ", ", event_var, ") ~", main_var))))
+            fit1 <- with(imp_data, suppressWarnings(coxph(as.formula(paste0("Surv(", time_var, ", ", event_var, ") ~", main_var)))))
             pool1 <- pool(fit1)
             rows_to_extract <- 1:(nlevels(factor(data_dint[[main_var]]))-1)
             stats1 <- extract_hr_stats(pool1,rows_to_extract)
             # Perform PH test on the first model (unadjusted)
             fit_complete <- complete(imp_data, action = 1)
             surv_obj <- Surv(fit_complete[[time_var]], fit_complete[[event_var]])
-            ph_model <- coxph(as.formula(paste0("surv_obj ~ ",main_var)), data = fit_complete)
+            ph_model <- suppressWarnings(coxph(as.formula(paste0("surv_obj ~ ",main_var)), data = fit_complete))
             ph_test <- cox.zph(ph_model)
             ph_p <- ph_test$table[main_var, "p"]
             verdict <- ifelse(ph_p < 0.05, "PH assumption violated", "PH assumption met")
             if (!is.null(other_variables)){
-                fit2 <- with(imp_data, coxph(as.formula(paste0("Surv(", time_var, ", ", event_var, ") ~", paste(c(main_var, other_variables), collapse = " + ")))))
+                fit2 <- with(imp_data, suppressWarnings(coxph(as.formula(paste0("Surv(", time_var, ", ", event_var, ") ~", paste(c(main_var, other_variables), collapse = " + "))))))
                 pool2 <- pool(fit2)
                 stats2 <- extract_hr_stats(pool2,rows_to_extract)
                 data.frame(
@@ -363,7 +363,7 @@ cox <- setRefClass(
                         )
             times  <- rep(time_var, length(events))
             # Fit Cox models
-            fit1 <- with(imp_data, coxph(as.formula(paste0("Surv(", time_var, ", ", event_var, ") ~", paste(c(main_var, interraction_terms, interraction), collapse = " + ")))))
+            fit1 <- with(imp_data, suppressWarnings(coxph(as.formula(paste0("Surv(", time_var, ", ", event_var, ") ~", paste(c(main_var, interraction_terms, interraction), collapse = " + "))))))
             pool1 <- pool(fit1)
             #number of rows for main_var and interraction terms
             n_main<-nlevels(factor(data_dint[[main_var]])) +sum(sapply(data_dint[interraction_terms], function(x) nlevels(as.factor(x))))-(length(interraction_terms)+1)
@@ -376,7 +376,7 @@ cox <- setRefClass(
             # Perform PH test on the first model (unadjusted)
             fit_complete <- complete(imp_data, action = 1)
             surv_obj <- Surv(fit_complete[[time_var]], fit_complete[[event_var]])
-            ph_model <- coxph(as.formula(paste0("surv_obj ~ ",paste(c(main_var, interraction_terms, interraction), collapse = " + "))), data = fit_complete)
+            ph_model <- suppressWarnings(coxph(as.formula(paste0("surv_obj ~ ",paste(c(main_var, interraction_terms, interraction), collapse = " + "))), data = fit_complete))
             ph_test <- cox.zph(ph_model)
             ph_p <- ph_test$table[main_var, "p"]
             verdict <- ifelse(ph_p < 0.05, "PH assumption violated", "PH assumption met")
@@ -388,7 +388,7 @@ cox <- setRefClass(
                 #total number of rows
                 nrows<-n_main+n_inter_terms+n_other
                 rows_to_extract<-c(1:n_main, n_inter:nrows)
-                fit2 <- with(imp_data, coxph(as.formula(paste0("Surv(", time_var, ", ", event_var, ") ~", paste(c(main_var,interraction_terms, interraction, other_variables), collapse = " + ")))))
+                fit2 <- with(imp_data, suppressWarnings(coxph(as.formula(paste0("Surv(", time_var, ", ", event_var, ") ~", paste(c(main_var,interraction_terms, interraction, other_variables), collapse = " + "))))))
                 pool2 <- pool(fit2)
                 stats2 <- extract_hr_stats(pool2,rows_to_extract)
                 data.frame(

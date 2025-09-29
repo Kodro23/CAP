@@ -91,7 +91,7 @@ BayesianModel <- setRefClass(
       
           # Plot posterior
           plot(dens, main = paste("Posterior vs Prior", 
-              if (!is.null(likelihood)) "vs Likelihood", 
+              if (!is.null(likelihood)) "vs Log-ikelihood", 
                               ":", param_name),
               lwd = 2, col = "blue", xlab = param_name,
               xlim=xlim, ylim=ylim)

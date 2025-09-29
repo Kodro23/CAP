@@ -130,14 +130,14 @@ compare_var_cat <- function(df, group_var_name) {
   for (var in cat_vars) {
     #For each categorical variable compute contigency table...
     contingency <- table(df[[var]], df[[group_var_name]])
-    expected <- chisq.test(contingency,correct = FALSE)$expected
+    expected <- suppressWarnings(chisq.test(contingency,correct = FALSE)$expected)
     test_type <- ""
     pval <- NA
 
     #...then check headcounts
     if (all(expected >= 5)) {
       #...chi2 test if all headcounts >5...
-      pval <- round(chisq.test(contingency)$p.value, 3)
+      pval <- round(suppressWarnings(chisq.test(contingency)$p.value), 3)
       test_type <- "Chi2"
     } else {
       #...or else fisher test
@@ -189,7 +189,7 @@ compare_var_num <- function(df, group_var_name) {
     } else {
       # Wilcoxon test
       formula <- as.formula(paste(var, "~", group_var_name))
-      pval <- round(wilcox.test(formula, data = data_subset)$p.value,3)
+      pval <- round(suppressWarnings(wilcox.test(formula, data = data_subset)$p.value),3)
       test <- "Mann-Whitney"
     }
 
@@ -234,7 +234,7 @@ compare_proportions <- function(data, variables, group_var) {
     totals <- rowSums(tab)
 
     # prop2 - prop1
-    test <- prop.test(successes, totals, correct = FALSE)
+    test <- suppressWarnings(prop.test(successes, totals, correct = FALSE))
     diff_prop <- round(100 * (test$estimate[1] - test$estimate[2]), 0)
     ci_low <- round(100 * test$conf.int[1], 0)
     ci_high <- round(100 * test$conf.int[2], 0)
@@ -276,7 +276,7 @@ compare_medians <- function(data, variables, group_var) {
     diff_median <- round(median(group1) - median(group0), 2)
     
     # P-value
-    p_val <- round(wilcox.test(group0, group1, exact = FALSE)$p.value, 4)
+    p_val <- round(suppressWarnings(wilcox.test(group0, group1, exact = FALSE)$p.value), 4)
     
     # Bootstrap CI for median difference
     boot_diffs <- replicate(1000, {
@@ -322,11 +322,11 @@ CorrelationsStudy <- setRefClass(
         #' To compute pearson correlation scores among all numerical variables
         #' @return A heatmap displaying correlations
 
-      corr_matrix <- cor(dataset[, numerical_variables], use = "pairwise.complete.obs")
+      corr_matrix <- suppressWarnings(cor(dataset[, numerical_variables], use = "pairwise.complete.obs"))
       melted_corr <- melt(corr_matrix)
       ggplot(melted_corr, aes(Var1, Var2, fill = value)) +
         geom_tile() +
-        geom_text(aes(label = round(value, 2)), size = 4) +
+        suppressWarnings(geom_text(aes(label = round(value, 2)), size = 4)) +
         scale_fill_distiller(palette = "Spectral", direction = 1,limits = c(-1, 1)) +
         theme_minimal() +
         theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
