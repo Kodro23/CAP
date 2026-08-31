@@ -37,6 +37,7 @@ where:
 **Frequentist approach**
 
 Zero-inflated model:
+
 $$
 \boxed{
 f_{Y \mid X,Z}(y\mid x,z)= 
@@ -50,6 +51,7 @@ $$
 Parameters are estimated by maximazign log-likelihood
 
 **Bayesian approach**
+
 $$
 \scriptsize
 \boxed{
