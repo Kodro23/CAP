@@ -13,6 +13,15 @@ characteristics <- function(dataset) {
   
   # Number of modalities
   carac$nombre_de_modalites <- sapply(dataset, function(col) length(unique(col)))
+  carac$liste_modalites <- sapply(dataset, function(col) {
+    vals <- unique(col)
+    vals <- vals[!is.na(vals)]  # remove NA
+    if (length(vals) <= 5) {
+      paste(vals, collapse = ", ")
+    } else {
+      ""
+    }
+  })
   
   # Number of missing values
   carac$number_of_missing_values <- sapply(dataset, function(col) sum(is.na(col)))

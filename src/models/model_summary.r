@@ -7,7 +7,7 @@ logit <- setRefClass(
     #' @params A dataframe and a list of binary variables to explain
   "logit",
   fields = list(
-    imp = "mids",
+    imp = "ANY",
     vars_to_explain = "character"
   ),
   methods = list(
@@ -268,7 +268,7 @@ cox <- setRefClass(
     #' @params A dataframe and a list of binary variables to explain
   "cox",
   fields = list(
-    imp_data = "mids",
+    imp_data = "ANY",
     time_event_pairs = "list"
   ),
   methods = list(
